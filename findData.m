@@ -90,25 +90,25 @@ Data(:,3) = z;
 figure(4)
  plot3(Data(:,1),Data(:,2),Data(:,3))
 
-% L = length(Data);
-% cur = 0;
-% cur2 = 1;
-% d = zeros(3,2*L);
-% for l = 2:1:(L) 
-% 
-% 
-%     d(1,cur2+1) = (Data(l,1)+Data(l-1,1))/2;
-%     d(2,cur2+1) = (Data(l,2)+Data(l-1,2))/2;
-%     d(3,cur2+1) = (Data(l,3)+Data(l-1,3))/2;
-%     cur2 = cur2+2;
-% 
-% end
-% for l = 1:1:(L) 
-%    d(1,cur+1) = Data(l,1);
-%    d(2,cur+1) = Data(l,2);
-%    d(3,cur+1) = Data(l,3);
-%     cur = cur+2;
-% 
-% end
+L = length(Data);
+cur = 0;
+cur2 = 1;
+d = zeros(3,2*L);
+for l = 2:1:(L) 
+
+
+    d(1,cur2+1) = (Data(l,1)+Data(l-1,1))/2;
+    d(2,cur2+1) = (Data(l,2)+Data(l-1,2))/2;
+    d(3,cur2+1) = (Data(l,3)+Data(l-1,3))/2;
+    cur2 = cur2+2;
+
+end
+for l = 1:1:(L) 
+   d(1,cur+1) = Data(l,1);
+   d(2,cur+1) = Data(l,2);
+   d(3,cur+1) = Data(l,3);
+    cur = cur+2;
+
+end
 
 
